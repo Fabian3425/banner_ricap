@@ -1,106 +1,168 @@
 body{
-    height: 100vh;
-    background: #F2F7FF;
-    position: relative;
-  }
-  .wrapper{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  height: 100vh;
+  background: #F2F7FF;
+  position: relative;
+}
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  /* items */
-  .item{
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    transition: .5s;
-  }
+/* items */
+.item{
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: .5s;
+}
 
-  .item-vector {
-    width: 45px;
+.item-vector {
+  width: 45px;
 }
 
 .fotografias img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  object-position: top center;
+width: 250px;
+height: 100%;
+object-fit: cover;
+object-position: top center;
 }
-.item.fotografias {
-  border-radius: 0% 100%;
+
+
+.item.fotografias.posicion-1 {
+  clip-path: xywh(0px 0px 100% 100% round 400px 0px);
 }
+
+.item.fotografias.posicion-2 {
+  clip-path: xywh(0px 0px 100% 100% round 400px 0px);
+}
+
+.item.fotografias.posicion-3 {
+  
+}
+
+.item.fotografias.posicion-4 {
+  clip-path: xywh(0px 0px 100% 100% round 0px 400px);
+}
+
+.item.fotografias.posicion-5 {
+ clip-path: xywh(0px 0px 100% 100% round 0px 400px);
+}
+
+.item.fotografias.posicion-6 {
+  
+}
+
+.item.fotografias.posicion-7 {
+  clip-path: path("M0.000124058 134.504C-0.0358294 160.058 7.74339 185.314 22.8023 208.532C37.8612 231.75 59.842 252.38 87.2308 269C118.588 227.652 135 181.441 135 134.5C135 87.5578 118.588 41.348 87.2308 0C59.8424 16.6222 37.8618 37.2529 22.803 60.4727C7.74419 83.6926 -0.0350642 108.949 0.000124058 134.504Z")
+}
+
+.item.fotografias.posicion-8 {
+  clip-path: path("M0.000124058 134.504C-0.0358294 160.058 7.74339 185.314 22.8023 208.532C37.8612 231.75 59.842 252.38 87.2308 269C118.588 227.652 135 181.441 135 134.5C135 87.5578 118.588 41.348 87.2308 0C59.8424 16.6222 37.8618 37.2529 22.803 60.4727C7.74419 83.6926 -0.0350642 108.949 0.000124058 134.504Z")
+}
+
+.item.fotografias.posicion-9 {
+  clip-path: xywh(0px 0px 100% 100% round 400px 0px);
+}
+
+.item.fotografias.posicion-10 {
+  clip-path: xywh(0px 0px 100% 100% round 400px 0px);
+}
+
+.item.fotografias.posicion-11 {
+  clip-path: xywh(0px 0px 100% 100% round 400px 0px);
+}
+
+.item.fotografias.posicion-12 {
+  clip-path: xywh(0px 0px 100% 100% round 400px 0px);
+}
+
+.item.fotografias.posicion-13 {
+  clip-path: xywh(0px 0px 100% 100% round 0px 400px);
+}
+
+.item.fotografias.posicion-14 {
+  clip-path: xywh(0px 0px 100% 100% round 0px 400px);
+}
+
+.item.fotografias.posicion-15 {
+  clip-path: xywh(0px 0px 100% 100% round 400px 0px);
+} 
+
+
+
+
+
 /* Controles */
 
-  .controls{
+.controls{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.left, .right{
+  color:transparent;
+  font-size: 24px;
+  font-size: 600px;
+  cursor: pointer;
+}
+
+.left{
+  margin-right: 10px;
+}
+.right{
+  margin-left: 10px;
+}
+
+.selection-off{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .item{
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+  }
+  .wrapper{
     position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
   }
-  .left, .right{
-    color:transparent;
-    font-size: 24px;
-    font-size: 600px;
-    cursor: pointer;
+  .controls{
+    top: 20px;
   }
-  
   .left{
-    margin-right: 10px;
+    margin-right: 50px;
   }
   .right{
-    margin-left: 10px;
+    margin-left: 50px;
   }
-  
-  .selection-off{
-      -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome and Opera */
+  a{
+    bottom: 20px;
+    height: 50px;
+    width: 200px;
+    font-weight: 600;
+    font-size: 1em;
   }
-  /* Responsive */
-  
-  @media screen and (max-width: 768px) {
-    .item{
-      width: 60px;
-      height: 60px;
-      font-size: 1.5em;
-    }
-    .wrapper{
-      position: absolute;
-      top: calc(50% - 30px);
-      left: calc(50% - 30px);
-    }
-    .controls{
-      top: 20px;
-    }
-    .left{
-      margin-right: 50px;
-    }
-    .right{
-      margin-left: 50px;
-    }
-    a{
-      bottom: 20px;
-      height: 50px;
-      width: 200px;
-      font-weight: 600;
-      font-size: 1em;
-    }
-  }
-  
+}
