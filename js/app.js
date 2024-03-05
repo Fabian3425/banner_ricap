@@ -39,7 +39,6 @@ function turnRight(){
   var holder = itemsId.pop();
   itemsId.unshift(holder);
   makeATurn();
-  // rotateItem();
 }
 
 function turnLeft(){
@@ -47,3 +46,17 @@ function turnLeft(){
     itemsId.push(holder);
     makeATurn();
 }
+
+
+// Intervalo para girar automáticamente cada cierto tiempo (por ejemplo, cada 3 segundos)
+var autoRotateInterval = setInterval(turnRight, 3000); // Cambia 3000 a la cantidad de milisegundos que deseas entre cada giro
+
+// Detener la rotación automática al pasar el mouse sobre el carrusel (opcional)
+// document.getElementById('carouselContainer').addEventListener('mouseover', function() {
+//   clearInterval(autoRotateInterval);
+// });
+
+// Reanudar la rotación automática al sacar el mouse del carrusel (opcional)
+document.getElementById('carouselContainer').addEventListener('mouseleave', function() {
+  autoRotateInterval = setInterval(turnRight, 3000); // Cambia 3000 a la cantidad de milisegundos que deseas entre cada giro
+});

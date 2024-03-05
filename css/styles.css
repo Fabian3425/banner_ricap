@@ -31,13 +31,6 @@ body{
   transform-origin:center
 }
 
-.item.contenedor-fotografias{
-
-  
-
-}
-
-
 .item.contenedor-fotografias .fotografias{
    width: 50%;
   height: 200px;
@@ -94,12 +87,6 @@ object-position: top center;
 .item.contenedor-fotografias.posicion-10 .fotografias{
   clip-path: path("M0.000114869 100.003C-0.0331753 119.002 7.16981 137.78 21.1133 155.042C35.0567 172.305 55.4093 187.643 80.7693 200C109.804 169.258 125 134.901 125 99.9996C125 65.0987 109.804 30.742 80.7693 0C55.4096 12.3585 35.0572 27.6973 21.1139 44.9612C7.17055 62.225 -0.0324669 81.0032 0.000114869 100.003Z")
 }
-
-
-
-
-
-
 /* Controles */
 
 .controls{
