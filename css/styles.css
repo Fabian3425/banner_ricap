@@ -152,3 +152,20 @@ object-position: top center;
     font-size: 1em;
   }
 }
+footer.container-footer {
+  height:100px;
+  background:#281c4e;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-family:monospace;
+  font-size:2em;
+  width:100%;
+  z-index:5
+}
+
+body{
+  display:flex;
+  align-items:end;
+}
