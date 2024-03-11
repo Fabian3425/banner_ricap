@@ -12,6 +12,8 @@ body{
   justify-content: center;
   align-items: center;
   width: 280px;
+  max-width: 1200px;
+  margin: 220px auto 0px auto;
 }
 
 .item.item-circle{
